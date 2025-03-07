@@ -34,7 +34,8 @@
 
                 <Button Content="Mortgage Calculator" Width="200" Height="50"
                  Background="#CCBCA4" BorderThickness="0" Padding="10"
-                 Foreground="Black" FontSize="14" Margin="5"/>
+                 Foreground="Black" FontSize="14" Margin="5"
+				 Click="MortgageCalculatorButton_Click"/>
 
                 <Button Content="Currency Converter" Width="200" Height="50"
                  Background="#CCBCA4" BorderThickness="0" Padding="10"
