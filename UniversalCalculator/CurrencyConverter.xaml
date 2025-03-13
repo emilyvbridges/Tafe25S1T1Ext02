@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="Calculator.CurrencyConverter"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Calculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+	<StackPanel Margin="40">
+		<!-- Title Stack Panel-->
+		<StackPanel>
+			<TextBlock x:Name="headingTextBlock" Text="Currency Conversion Calculator" FontSize="60"  HorizontalAlignment="Center" Foreground="black" Margin="10,50,0,0" FontWeight="Bold"/>
+		</StackPanel>
+
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+
+			<!-- Headings for currency conversion -->
+			<TextBlock Grid.Row="0" Grid.Column="0" x:Name="amountTextBlock" Text="Amount $" FontSize="60" Foreground="black" Margin="10"/>
+			<TextBlock Grid.Row="0" Grid.Column="1" x:Name="baseTextBlock" Text="From" FontSize="60" Foreground="black" Margin="10"/>
+			<TextBlock Grid.Row="0" Grid.Column="2" x:Name="targetTextBlock" Text="To" FontSize="60" Foreground="black" Margin="10"/>
+
+			<!-- Input controls for currency conversion -->
+			<TextBox Grid.Row="1" Grid.Column="0" Height="40" x:Name="amountTextBox" Margin="10"/>
+			<ComboBox Grid.Row="1" Grid.Column="1" Height="40" x:Name="baseComboBox" Margin="10" HorizontalAlignment="Stretch"/>
+			<ComboBox Grid.Row="1" Grid.Column="2" Height="40" x:Name="targetComboBox" Margin="10" HorizontalAlignment="Stretch"/>
+		</Grid>
+
+		<!-- Output from currency conversion -->
+		<StackPanel Grid.Row="2" Grid.Column="0">
+			<TextBlock x:Name="baseAmountTextBlock" FontSize="25" Margin="10"/>
+			<TextBlock x:Name="targetAmountTextBlock" FontSize="35" Margin="10"/>
+			<TextBlock x:Name="baseToTargetRateTextBlock" FontSize="25" Margin="10"/>
+			<TextBlock x:Name="targetToBaseRateTextBlock" FontSize="25" Margin="10"/>
+		</StackPanel>
+
+		<!-- Button for converting currency and quit to main menu -->
+		<StackPanel Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center">
+			<Button x:Name="convertButton" Margin="10" FontSize="35" Content="Currency conversion" Click="convertButton_Click"/>
+			<Button x:Name="Exit" Margin="10" FontSize="35" Content="Exit" HorizontalAlignment="Center" Click="Exit_Click"/>
+		</StackPanel>
+	</StackPanel>
+</Page>
