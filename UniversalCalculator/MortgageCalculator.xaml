@@ -1,0 +1,90 @@
+﻿<Page
+    x:Class="Calculator.MortgageCalculator"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Calculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+       Background="white">
+    <StackPanel>
+        <!--Title-->
+        <TextBlock Text="Mortgage Calculator"
+               FontSize="70"
+               FontWeight="Bold"
+               Foreground="black"
+               HorizontalAlignment="Center"
+               Margin="10,60,0,0"/>
+
+
+
+
+        <StackPanel HorizontalAlignment="Center" Padding="15">
+            <Grid HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,20,0,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <!--first column-->
+                    <ColumnDefinition Width="*"/>
+                    <!--second column-->
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <!--Row 1-->
+                    <RowDefinition Height="Auto"/>
+                    <!--Row 2-->
+                    <RowDefinition Height="Auto"/>
+                    <!--Row 3-->
+                    <RowDefinition Height="Auto"/>
+                    <!--Row 4-->
+                    <RowDefinition Height="Auto"/>
+                    <!--Row 5-->
+                    <RowDefinition Height="Auto"/>
+                    <!--Row 6-->
+                </Grid.RowDefinitions>
+
+
+                <!-- Text boxes to input data and view outcome -->
+
+                <!--Principal borrowing amount -->
+                <TextBlock Text="Principal borrow $:" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="30" Grid.Row="0" Grid.Column="0" Margin="0,0,30,0"/>
+                <TextBox x:Name="principalBorrowTextBox" VerticalAlignment="Center"   Width="250" FontSize="20" HorizontalAlignment="Stretch"  Grid.Row="0" Grid.Column="1" Margin="20"/>
+
+                <!--Years of loan term -->
+                <TextBlock Text="Years:" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="30" Grid.Row="1" Grid.Column="0" Margin="0,0,30,0"/>
+                <TextBox x:Name="yearsTextBox" VerticalAlignment="Center"  FontSize="20" HorizontalAlignment="Stretch"  Grid.Row="1" Grid.Column="1" Margin="20"/>
+
+                <!-- and months of loan term -->
+                <TextBlock Text="and Months:" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="30" Grid.Row="2" Grid.Column="0" Margin="0,0,30,0"/>
+                <TextBox x:Name="monthsTextBox" VerticalAlignment="Center"  FontSize="20" HorizontalAlignment="Stretch"  Grid.Row="2" Grid.Column="1" Margin="20"/>
+
+                <!-- Yearly interest rate -->
+                <TextBlock Text="Yearly Interest Rate:" VerticalAlignment="Center" FontSize="30" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="0" Margin="0,0,30,0"/>
+                <TextBox x:Name="yearlyInterestRateTextBox" VerticalAlignment="Center"  FontSize="20" HorizontalAlignment="Stretch"  Grid.Row="3" Grid.Column="1" Margin="20"/>
+
+
+                <!-- Monthly interest rate -->
+                <TextBlock Text="Monthly Interest Rate:" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="30" Grid.Row="4" Grid.Column="0" Margin="0,0,30,0"/>
+                <TextBox x:Name="monthlyInterestRateTextBox" VerticalAlignment="Center"  FontSize="20"  Grid.Row="4" Grid.Column="1" Margin="20"/>
+
+
+                <!--Monthly repayment in dollars -->
+                <TextBlock Text="Monthly Repayment $:" VerticalAlignment="Center" FontSize="30" Grid.Row="5" Grid.Column="0" Margin="0,0,30,0"/>
+                <TextBox x:Name="repaymentTextBox" VerticalAlignment="Center"  FontSize="20" HorizontalAlignment="Stretch"  Grid.Row="5" Grid.Column="1" Margin="20"/>
+
+            </Grid>
+            <!--Buttons -->
+            <Button Content="Calculate" Width="180" Height="60"
+                    Background="#B2B2B2" BorderThickness="0" Padding="1"
+                    Foreground="Black" FontSize="40" Margin="10"
+                    HorizontalAlignment="Center" Click="Button_Click"/>
+            <Button Content="Exit" Width="80" Height="60"
+                    Background="#B2B2B2" BorderThickness="0" Padding="1"
+                    Foreground="Black" FontSize="40" Margin="10"
+                    HorizontalAlignment="Center"
+					Click="ExitButton_Click"/>
+
+
+        </StackPanel>
+    </StackPanel>
+</Page>
