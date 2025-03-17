@@ -30,7 +30,7 @@
             <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Spacing="5" Margin="65,70,0,0">
                 <Button Content="Maths Calculator" Width="200" Height="50"
                     Background="#CCBCA4" BorderThickness="0" Padding="10"
-                    Foreground="Black" FontSize="14" Margin="5"/>
+                    Foreground="Black" FontSize="14" Margin="5" Click="MathsCalculatorButton_Click"/>
 
                 <Button Content="Mortgage Calculator" Width="200" Height="50"
                  Background="#CCBCA4" BorderThickness="0" Padding="10"
@@ -39,11 +39,11 @@
 
                 <Button Content="Currency Converter" Width="200" Height="50"
                  Background="#CCBCA4" BorderThickness="0" Padding="10"
-                 Foreground="Black" FontSize="14" Margin="5" Click="Button_Click"/>
+                 Foreground="Black" FontSize="14" Margin="5" Click="CurrencyCalculatorButton_Click"/>
 
                 <Button Content="Exit" Width="200" Height="50"
                  Background="#CCBCA4" BorderThickness="0" Padding="10"
-                 Foreground="Black" FontSize="14" Margin="5"/>
+                 Foreground="Black" FontSize="14" Margin="5" Click="QuitButton_Click"/>
             </StackPanel>
             <Image Source="Assets/abacus.PNG"
 				   HorizontalAlignment="Right"

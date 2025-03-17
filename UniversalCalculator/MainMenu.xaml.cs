@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -27,6 +28,11 @@ namespace Calculator
 			this.InitializeComponent();
 		}
 
+		/// <summary>
+		/// Loads the Mortgage Calculator
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		private void MortgageCalculatorButton_Click(object sender, RoutedEventArgs e)
 		{
 			Frame.Navigate(typeof(MortgageCalculator));
@@ -34,13 +40,33 @@ namespace Calculator
 		}
 
 		/// <summary>
-		/// Loads the Currency Converter.
+		/// Loads the Currency Conversion Converter.
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
-		private void Button_Click(object sender, RoutedEventArgs e)
+		private void CurrencyCalculatorButton_Click(object sender, RoutedEventArgs e)
 		{
 			Frame.Navigate(typeof(CurrencyConverter));
+		}
+
+		/// <summary>
+		/// Exits the application.
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void QuitButton_Click(object sender, RoutedEventArgs e)
+		{
+			CoreApplication.Exit();
+		}
+
+		/// <summary>
+		/// Loads the maths calculator.
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void MathsCalculatorButton_Click(object sender, RoutedEventArgs e)
+		{
+			Frame.Navigate(typeof(MainPage));
 		}
 	}
 
