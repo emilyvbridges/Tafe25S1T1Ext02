@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.ServiceModel.Channels;
 using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -68,6 +70,18 @@ namespace Calculator
 		{
 			Frame.Navigate(typeof(MainPage));
 		}
-	}
+
+		/// <summary>
+		/// Loads the trip calculator
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private async void TripCalculatorButton_Click(object sender, RoutedEventArgs e)
+		{
+			var dialogMessage = new MessageDialog("Trip calculator C# code will be developed later.");
+			await dialogMessage.ShowAsync();
+			return;
+        }
+    }
 
 }

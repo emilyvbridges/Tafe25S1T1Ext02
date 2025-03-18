@@ -41,7 +41,11 @@
                  Background="#CCBCA4" BorderThickness="0" Padding="10"
                  Foreground="Black" FontSize="14" Margin="5" Click="CurrencyCalculatorButton_Click"/>
 
-                <Button Content="Exit" Width="200" Height="50"
+				<Button Content="Trip Calculator" Width="200" Height="50"
+                 Background="#CCBCA4" BorderThickness="0" Padding="10"
+                 Foreground="Black" FontSize="14" Margin="5" Click="TripCalculatorButton_Click"/>
+
+				<Button Content="Exit" Width="200" Height="50"
                  Background="#CCBCA4" BorderThickness="0" Padding="10"
                  Foreground="Black" FontSize="14" Margin="5" Click="QuitButton_Click"/>
             </StackPanel>
